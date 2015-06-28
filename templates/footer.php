@@ -1,11 +1,11 @@
-			<div>
+            </div>
 
-			<div id="bottom">
-				Copyright &#169; Newsimmer
-			</div>
+            <div id="bottom">
+                Copyright &#169; John Harvard
+            </div>
 
-		</div>
+        </div>
 
-	</body>
+    </body>
 
 </html>
