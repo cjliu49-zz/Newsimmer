@@ -9,9 +9,9 @@
         <link href="/~CalvinLiu/Newsimmer/public/css/styles.css" rel="stylesheet"/>
 
         <?php if (isset($title)): ?>
-            <title>C$50 Finance: <?= htmlspecialchars($title) ?></title>
+            <title>Newsimmer: <?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>C$50 Finance</title>
+            <title>Newsimmer: Stir the Pot</title>
         <?php endif ?>
 
         <script src="/~CalvinLiu/Newsimmer/public/js/jquery-1.10.2.min.js"></script>
@@ -19,13 +19,16 @@
         <script src="/~CalvinLiu/Newsimmer/public/js/scripts.js"></script>
 
     </head>
+    
+    <br>
 
     <body>
 
         <div class="container">
 
             <div id="top">
-                <a href="/"><img alt="C$50 Finance" src="/~CalvinLiu/Newsimmer/public/img/logo.gif"/></a>
+                <a href="/~CalvinLiu/Newsimmer/public"><img alt="Newsimmer.com" src="/~CalvinLiu/Newsimmer/public/img/newsimmer_icon"/></a>
             </div>
 
             <div id="middle">
+    

@@ -2,38 +2,27 @@
 
     // configuration
     require("../includes/config.php"); 
+
+
+    if( ! ini_get('date.timezone') )
+    {
+        date_default_timezone_set('GMT');
+    }
+    $rows = query("SELECT datetime, url, description FROM links WHERE id = ? ORDER BY datetime DESC", $_SESSION["id"]);
     
-    $rows = query("SELECT symbol, shares FROM portfolios WHERE id = ?", $_SESSION["id"]);
-    
-    $positions = [];
+    $links = [];
     foreach ($rows as $row)
     {
-        $stock = lookup($row["symbol"]);
-        if ($stock !== false)
-        {
-            $positions[] = [
-            "name" => $stock["name"],
-            "price" => $stock["price"],
-            "shares" => $row["shares"],
-            "symbol" => $row["symbol"],
-            "total" => $stock["price"] * $row["shares"]
-            ];
-        }
-    }
-            
-    $cash = query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
+        $date = date_create($row["datetime"]);
+
+        $links[] = [
+        "date" => date_format($date, 'F j\, Y'),
+        "url" => $row["url"],
+        "description" => $row["description"]
+        ];
         
-
-    $value = $cash[0]["cash"];
-    foreach ($positions as $position)
-    {
-    
-        $value = $value + ($position["total"]); 
-
     }
     
-
-    
-    render("portfolio.php", ["positions" => $positions, "cash" => $cash[0]["cash"], "title" => "Portfolio", "value" => $value]);
+    render("readinglist.php", ["links" => $links, "title" => "Reading List"]);
 
 ?>

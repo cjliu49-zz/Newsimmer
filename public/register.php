@@ -33,7 +33,7 @@
         }
         else
         {
-            $insert = query("INSERT INTO users (username, hash, cash, email) VALUES (?, ?, 10000.00, ?)", $_POST["username"], crypt($_POST["password"]), $_POST["email"]);
+            $insert = query("INSERT INTO users (username, hash, email) VALUES (?, ?, ?)", $_POST["username"], crypt($_POST["password"]), $_POST["email"]);
             if ($insert === false)
             {
                 apologize("Couldn't register you.");
@@ -46,7 +46,7 @@
                 $_SESSION["id"] = $rows[0]["id"];   
                 
                 // redirect to index
-                redirect("/index.php");        
+                redirect("index.php");        
             }
         }
             
