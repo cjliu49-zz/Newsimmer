@@ -8,7 +8,7 @@
     {
         date_default_timezone_set('GMT');
     }
-    $rows = query("SELECT datetime, url, description FROM links WHERE id = ? ORDER BY datetime DESC", $_SESSION["id"]);
+    $rows = query("SELECT datetime, url, description, row_id FROM links WHERE id = ? ORDER BY datetime DESC", $_SESSION["id"]);
     
     $links = [];
     foreach ($rows as $row)
@@ -18,7 +18,8 @@
         $links[] = [
         "date" => date_format($date, 'F j\, Y'),
         "url" => $row["url"],
-        "description" => $row["description"]
+        "description" => $row["description"],
+        "row_id" => $row["row_id"]
         ];
         
     }

@@ -5,7 +5,7 @@
 </p>
 <fieldset>
         <div class="form-group">
-            <input class="form-control" name="url" placeholder="Paste URL to Add" type="text"/>
+            <input class="form-control" name="url" placeholder="Paste URL to Add" type="text"/> 
         </div>
 
         <div class="form-group">
