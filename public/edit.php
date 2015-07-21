@@ -3,10 +3,6 @@
     // configuration
     require("../includes/config.php"); 
 
-    $row_id = $_GET["id"];
-    $row_query = mysql_query("SELECT url, description FROM links WHERE row_id = $row_id");
-    $url_value = mysql_fetch_row($row_query);
-
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if (empty($_POST["url"]))
@@ -23,7 +19,7 @@
             }
             if (!filter_var($_POST["url"], FILTER_VALIDATE_URL) === false)
             {
-                $add = query("INSERT INTO links (id, url, description) VALUES(?, ?, ?) ON DUPLICATE KEY UPDATE id=id", $_SESSION["id"], $_POST["url"], $_POST["description"]);
+                $add = query("UPDATE links SET url = ?, description = ? WHERE row_id = ?", $_POST["url"], $_POST["description"], $_POST["row_id"]);
                 redirect("index.php");
             }
             else
@@ -34,9 +30,9 @@
               
     }
     
-    else
-    {
-        render("edit_form.php", ["title" => "Edit Link", "url_value" => $url_value]);
-    }
+    // else
+    // {
+    //     render("edit_form.php", ["title" => "Edit Link", "url_value" => $url_value, "description_value" => $description_value]);
+    // }
 
 ?>

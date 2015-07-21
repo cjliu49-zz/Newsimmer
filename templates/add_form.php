@@ -9,7 +9,7 @@
         </div>
 
         <div class="form-group">
-            <textarea class="form-control" name="description" rows="5" cols="50" placeholder="Describe your link (Optional)"></textarea>
+            <textarea class="form-control" name="description" rows="7" cols="70" placeholder="Describe your link (Optional)"></textarea>
         </div>
 
         <div class="form-group">
