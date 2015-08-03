@@ -6,8 +6,8 @@
 <fieldset>
         <div class="form-group">
             <input class="form-control" name="url" value="<?= $url_value ?>" type="text"/> 
-            <a href = <?=$url_value?> target = _blank> Test Link </a>
-        </div>
+<!--             <a href = <?=$url_value?> target = _blank> Test Link </a>
+ -->        </div>
 
         <div class="form-group">
             <textarea class="form-control" name="description" rows="7" cols="70"> <?= $description_value ?> </textarea>
