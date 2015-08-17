@@ -9,6 +9,9 @@
             <th>Date Added</th>
             <th>URL</th>
             <th>Description</th>
+            <th></th>
+            <th></th>
+
         </tr>
     </thead>
 
