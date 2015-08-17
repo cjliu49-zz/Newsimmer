@@ -12,8 +12,8 @@
                 <div class = "form-group">
 
                     <input class="form-control" size = "35" placeholder="Paste a URL (Required)" id = "url" type="text" name="url"/>           
-                    <div class="selector-wrapper"></div>
-                    </div>
+<!--                     <div class="selector-wrapper"></div>
+ -->                    </div>
             </form>
 
             <script>

@@ -12,6 +12,8 @@
         
         else
         {
+            $_POST["url"] = str_replace('%3A/',':/', $_POST["url"]);
+
             $parsed = parse_url ($_POST["url"]);
             if (empty($parsed["scheme"]))
             {
