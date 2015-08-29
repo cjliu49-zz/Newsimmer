@@ -12,8 +12,8 @@
                 <div class = "form-group">
 
                     <input class="form-control" size = "35" placeholder="Paste a URL (Required)" id = "url" type="text" name="url"/>           
-<!--                     <div class="selector-wrapper"></div>
- -->                    </div>
+                    <div class="selector-wrapper"></div>
+                </div>
             </form>
 
             <script>
@@ -28,9 +28,9 @@
             
             </script>
 
-        <div class="form-group">
-            <input class="form-control" name="title" size = "70" placeholder="Title your link (Optional)" type="text"/> 
-        </div>
+<!--         <div class="form-group">
+            <input class="form-control" name="url_title" size = "70" placeholder="Title your link (Optional)" type="text"/> 
+        </div> -->
 
         <div class="form-group">
             <textarea class="form-control" name="description" rows="7" cols="70" placeholder="Describe your link (Optional)"></textarea>

@@ -8,7 +8,8 @@
         <tr>
             <th>Date Added</th>
             <th>URL</th>
-            <th>Description</th>
+<!--             <th>Title</th>
+ -->        <th>Description</th>
             <th></th>
             <th></th>
 
@@ -35,11 +36,11 @@
         ?> -->
 
         <tr>
-            <td><?= $link["date"] ?></td>
-            <td><a href = <?=$link["url"]?> target="_blank"><?= $link["url"] ?> </a></td>
-            <td><?= $link["description"] ?></td>
-            <td><a href = "edit_values.php?id=<?= $link["row_id"] ?>"><i>Edit</i></a></td>    
-            <td><a href = "delete.php?id=<?= $link["row_id"] ?>"><i>Delete</i></a></td>
+            <td class = "date_cell"><?= $link["date"] ?></td>
+            <td class = "url_cell"><a href = <?=$link["url"]?> target="_blank"><?= $link["url"] ?> </a></td>
+            <td class = "description_cell"><?= $link["description"] ?></td>
+            <td class = "edit_cell"><a href = "edit_values.php?id=<?= $link["row_id"] ?>"><i>Edit</i></a></td>    
+            <td class = "delete_cell"><a href = "delete.php?id=<?= $link["row_id"] ?>"><i>Delete</i></a></td>
         </tr>
 
     <?php endforeach ?>

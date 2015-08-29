@@ -20,6 +20,7 @@
         "url" => $row["url"],
         "description" => $row["description"],
         "row_id" => $row["row_id"]
+        // "url_title" => $row["url_title"]
         ];
         
     }

@@ -51,7 +51,26 @@
     margin: 20px;
 }
 
-/*#url
-{
-    background-color: #FFFF99
-}*/
+td {
+    word-break: break-word;
+}
+
+td.date_cell {
+    width: 10%;
+}
+
+td.url_cell {
+    width: 20%;
+}
+
+td.description_cell {
+    width: 60%;
+}
+
+td.edit_cell {
+    width: 5%;
+}
+
+td.delete_cell {
+    width: 5%;
+}
